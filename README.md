@@ -32,7 +32,7 @@ public/videos/   # Vídeos dos heros
 npm install
 npm run dev
 
-Acesse em: http://localhost:3000
+Acesse em: https://canto-das-aves.vercel.app/
 
 📷 Créditos de Imagens
 Algumas imagens são ilustrativas, utilizadas como placeholders.
