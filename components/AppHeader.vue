@@ -12,7 +12,11 @@
     >
       <!-- Logo clicável -->
       <router-link to="/" style="flex: 1 1 auto; min-width: 0; padding-left: 16px; display: flex; align-items: center;">
-        <img :class="{'logo-scrolled': scrolled}" src="/images/logo.png" alt="Pousada Canto das Aves" style="height: 90px;"/>
+        <img 
+          :class="{'logo-scrolled': scrolled}" 
+          src="/images/logo.png" 
+          alt="Pousada Canto das Aves" 
+          style="height: 90px; background: transparent"/>
       </router-link>
 
       <!-- Menu horizontal -->

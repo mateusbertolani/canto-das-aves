@@ -51,19 +51,16 @@
 
 const socialLinks= [
   { icon: 'mdi-facebook',
-  url: 'https://www.facebook.com/pousadagrandchamp?gad_source=1&gad_campaignid=14501339161&gbraid=0AAAAABVrdRE_za1B7apNVMwzlKgeJIi7-&gclid=CjwKCAjwsZPDBhBWEiwADuO6y8VHcMfO38qp65bbZd-k48HuCDJMPrsy62WX1Q96xrgbmXXkRb5BUxoCrEEQAvD_BwE'
+  url: 'https://www.facebook.com'
   },
   { icon: 'mdi-instagram',
-  url: 'https://www.instagram.com/pousada_santaclara/'
-  },
-  { icon: 'mdi-twitter' ,
-    url: 'https://www.tiktok.com/discover/grandchamp-campos-do-jordao'
+  url: 'https://www.instagram.com'
   },
   { icon: 'mdi-youtube' ,
-    url: 'https://www.youtube.com/watch?v=jhnUV6SpbfA'
+    url: 'https://www.youtube.com'
   },
   { icon: 'mdi-earth' ,
-    url: 'https://www.tripadvisor.com.br/Hotel_Review-g303607-d2463367-Reviews-Pousada_Grandchamp-Campos_Do_Jordao_State_of_Sao_Paulo.html'
+    url: 'https://www.tripadvisor.com.br'
   }
 ]
 
