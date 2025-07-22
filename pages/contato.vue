@@ -1,7 +1,7 @@
 <template>
   <div class="contato-video-fundo">
     <video autoplay muted loop playsinline class="video-fundo">
-      <source src="/videos/hero-reserva.mp4" type="video/mp4" />
+      <source src="/videos/hero-contato.mp4" type="video/mp4" />
       Seu navegador não suporta vídeo.
     </video>
     <div class="overlay"></div>

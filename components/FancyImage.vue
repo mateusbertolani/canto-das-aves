@@ -45,12 +45,13 @@ const hover = ref(false)
 <style scoped>
 .fancy-image-wrapper {
   position: relative;
-  display: inline-block;
   width: 100%;
+  height: 320px; /* altura fixa para uniformizar */
   overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .fancy-image-wrapper.hovered {
@@ -60,10 +61,10 @@ const hover = ref(false)
 
 .fancy-image {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  transition: transform 0.4s ease;
-  user-select: none;
+  border-radius: 12px;
 }
 
 .overlay {

@@ -1,5 +1,10 @@
 <template>
-  <v-app-bar color="white" elevation="2" fixed>
+  <v-app-bar
+    :color="scrolled ? 'white' : 'transparent'"
+    :elevation="scrolled ? 2 : 0"
+    fixed
+    class="app-header"
+  >
     <v-container
       fluid
       class="pa-0"
@@ -7,7 +12,7 @@
     >
       <!-- Logo clicável -->
       <router-link to="/" style="flex: 1 1 auto; min-width: 0; padding-left: 16px; display: flex; align-items: center;">
-        <img src="/images/logo.png" alt="Pousada Santa Clara" style="height: 90px;"/>
+        <img :class="{'logo-scrolled': scrolled}" src="/images/logo.png" alt="Pousada Canto das Aves" style="height: 90px;"/>
       </router-link>
 
       <!-- Menu horizontal -->
@@ -67,21 +72,40 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+
+const scrolled = ref(false);
+
 const links = [
   { label: 'A Pousada', to: '/a-pousada' },
   { label: 'Acomodações', to: '/acomodacoes' },
-  { label: 'Galeria', to: '/galeria' },
-  { label: 'Reservas', to: '/reservas' },
+  { label: 'Turismo e Região', to: '/turismo' },
   { label: 'Contato', to: '/contato' }
 ]
+
+function handleScroll() {
+  scrolled.value = window.scrollY > 50;
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <style scoped>
-.title-responsive {
-  font-size: clamp(1.25rem, 2vw, 2.5rem);
-  line-height: 1.1;
-  white-space: normal;
-  text-align: left;
-  padding-top: 4px;
+.app-header {
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  z-index: 20; /* garante que fique sobre o vídeo */
+  background-color: transparent; /* padrão transparente */
+  box-shadow: none; /* sem sombra inicialmente */
+}
+
+.logo-scrolled {
+  transition: height 0.4s ease;
+  height: 70px !important; /* pode diminuir o logo ao rolar, opcional */
 }
 </style>

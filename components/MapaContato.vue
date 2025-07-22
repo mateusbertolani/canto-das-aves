@@ -3,7 +3,7 @@
     <v-row class="d-flex align-center flex-wrap-reverse" no-gutters>
       <!-- Texto e informações -->
       <v-col cols="12" md="6" class="px-6 py-8">
-        <h2 class="section-title">Chegar até a Santa Clara é fácil</h2>
+        <h2 class="section-title">Chegar até a Canto das Aves é fácil</h2>
         <p class="section-text">
           Nossa pousada está cercada por natureza e tranquilidade, mas com fácil acesso pelas principais cidades. 
           Venha viver dias de descanso em um refúgio acolhedor.
@@ -29,7 +29,7 @@
 
         <div class="contato-info">
           <p><v-icon class="me-2" color="green">mdi-phone</v-icon>(24) 99999-9999</p>
-          <p><v-icon class="me-2" color="green">mdi-email</v-icon>contato@pousadasantaclara.com.br</p>
+          <p><v-icon class="me-2" color="green">mdi-email</v-icon>contato@pousadacantodasaves.com.br</p>
           <p><v-icon class="me-2" color="green">mdi-map-marker</v-icon>Visconde de Mauá - RJ</p>
         </div>
       </v-col>

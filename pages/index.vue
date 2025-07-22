@@ -12,7 +12,7 @@
 
       <div class="hero-overlay">
         <h1 class="hero-title text-outline-lightgreen">
-          Viva a magia de Visconde de Mauá na Pousada Santa Clara
+          Viva a magia de Visconde de Mauá na Pousada Canto das Aves
         </h1>
         <v-btn
           color="green darken-3"
@@ -34,14 +34,11 @@
             <template #image>
               <v-img :src="servico.img" aspect-ratio="16/9" cover alt="Imagem do serviço {{ servico.title }}" />
             </template>
-            <template #icon>
-              <IconCircle :icon="servico.icon" />
-            </template>
             <template #title>
-              <h4 class="servico-title mt-3">{{ servico.title }}</h4>
+              <h3 class="card-title">{{ servico.title }}</h3>
             </template>
             <template #description>
-              <p class="servico-description">{{ servico.description }}</p>
+              <p class="card-description">{{ servico.description }}</p>
             </template>
           </BaseCard>
         </v-col>
@@ -62,10 +59,10 @@
               <v-img :src="item.img" cover alt="Imagem de {{ item.title }}" />
             </template>
             <template #title>
-              <h3 class="turismo-title mb-2">{{ item.title }}</h3>
+              <h3 class="card-title">{{ item.title }}</h3>
             </template>
             <template #description>
-              <p class="turismo-description">{{ item.description }}</p>
+              <p class="card-description">{{ item.description }}</p>
             </template>
           </BaseCard>
         </v-col>
@@ -88,10 +85,10 @@
               />
             </template>
             <template #title>
-              <div class="pa-4 acomodacao-text">
+              <div class="card-title">
                 <div>
                   <h3>{{ categoria.name }}</h3>
-                  <p class="acomodacao-description mt-2">{{ categoria.description }}</p>
+                  <p class="card-description">{{ categoria.description }}</p>
                 </div>
               </div>
             </template>
@@ -107,13 +104,13 @@
     <section class="sobre-section pa-8">
       <v-row>
         <v-col cols="12" md="6" data-aos="fade-right" data-aos-duration="1000">
-          <SectionTitle title="Um Pouco da Pousada Santa Clara" align="left" />
+          <SectionTitle title="Um Pouco da Pousada Canto das Aves" align="left" />
           <p class="section-text">
-            Localizada em meio à exuberância da Mata Atlântica, a Pousada Santa Clara oferece uma experiência única de aconchego, tranquilidade e contato direto com a natureza. Com charme rústico, atendimento acolhedor e um ambiente onde até os pets são bem-vindos, é o destino perfeito para casais, famílias, aventureiros e seus companheiros de quatro patas que buscam momentos inesquecíveis em Visconde de Mauá.
+            Localizada em meio à exuberância da Mata Atlântica, a Pousada Canto das Aves oferece uma experiência única de aconchego, tranquilidade e contato direto com a natureza. Com charme rústico, atendimento acolhedor e um ambiente onde até os pets são bem-vindos, é o destino perfeito para casais, famílias, aventureiros e seus companheiros de quatro patas que buscam momentos inesquecíveis em Visconde de Mauá.
           </p>
         </v-col>
         <v-col cols="12" md="6" data-aos="fade-left" data-aos-duration="1000">
-          <FancyImage src="/images/pousada-exterior.jpg" alt="Pousada Santa Clara" />
+          <FancyImage src="/images/pousada-exterior.jpg" alt="Pousada Canto das Aves" />
         </v-col>
       </v-row>
     </section>
@@ -150,9 +147,9 @@
 
         <v-col cols="12" md="6" class="d-flex flex-column justify-center" data-aos="fade-left" data-aos-duration="900">
           <div class="contato-info mb-6">
-            <p><v-icon left color="green darken-3">mdi-phone</v-icon> (24) 99269-0350</p>
-            <p><v-icon left color="green darken-3">mdi-whatsapp</v-icon> (24) 99296-0350</p>
-            <p><v-icon left color="green darken-3">mdi-email</v-icon> contato@pousadasantaclara.com</p>
+            <p><v-icon left color="green darken-3">mdi-phone</v-icon> (99) 99999-9999</p>
+            <p><v-icon left color="green darken-3">mdi-whatsapp</v-icon> (99) 99999-9999</p>
+            <p><v-icon left color="green darken-3">mdi-email</v-icon> contato@pousadacantodasaves.com</p>
           </div>
 
           <div class="distancias mb-6">
@@ -469,6 +466,11 @@ const distancias = [
   overflow: hidden; /* para bordas arredondadas funcionarem direito */
 }
 
+.v-card.v-card--outlined {
+  border-width: 2px; /* Ou até 3px, conforme preferir */
+  border-color: #2e7d32; /* verde escuro usado nas acomodações */
+}
+
 .acomodacao-img {
   flex: 1 1 50%; /* ocupa 50% da altura do card */
   width: 100%;
@@ -484,22 +486,22 @@ const distancias = [
   border-radius: 12px 12px 0 0;
 }
 
-.acomodacao-text {
-  flex: 1 1 50%; /* ocupa a outra metade */
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 0 0 12px 12px; /* bordas arredondadas só embaixo */
-  text-align: center;
-  
-  /* Centralizar o texto verticalmente */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Título dos cards */
+.card-title, /* use essa classe onde quiser o título igual ao room-title */
+.room-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #248144; /* verde usado na página acomodação */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
 
-  font-size: 1.3rem;
-  font-weight: 600;
-  line-height: 1.3;
-  color: #2e7d32; /* verde escuro */
+/* Descrição dos cards */
+.card-description, /* use essa classe onde quiser a descrição igual ao room-description */
+.room-description {
+  font-size: 1.2rem;
+  color: #444444; /* cinza escuro */
+  line-height: 1.6;
 }
 
 .hover-card {
@@ -520,7 +522,6 @@ const distancias = [
 }
 
 .servicos-destaques-section {
-  background-color: #f8f8f8;
   border-radius: 12px;
   margin-bottom: 3rem;
 }
@@ -543,9 +544,11 @@ const distancias = [
 }
 
 .sobre-section p.section-text {
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.6;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  color: #458148;
+  line-height: 1.8;
+  font-style: italic;
 }
 
 .depoimento-card {

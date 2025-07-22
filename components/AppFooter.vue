@@ -4,7 +4,7 @@
       <v-row>
         <v-col cols="12" md="4" class="mb-4 mb-md-0">
           <div class="text-center text-md-start">
-            <div class="text-6 font-weight-bold">Pousada Santa Clara</div>
+            <div class="text-6 font-weight-bold">Pousada Canto das Aves</div>
             <div class="text-body-2">Chalés em meio à natureza</div>
           </div>
         </v-col>
@@ -17,7 +17,7 @@
             </div>
             <div class="d-flex align-center justify-center justify-md-start mb-2">
               <v-icon>mdi-email</v-icon>
-              <span class="ml-2">contato@pousadasantaclara.com.br</span>
+              <span class="ml-2">contato@pousadacantodasaves.com.br</span>
             </div>
           </div>
         </v-col>

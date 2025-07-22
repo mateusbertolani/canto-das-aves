@@ -1,9 +1,13 @@
 <template>
   <section
     class="section-category-title"
-    :style="{ backgroundImage: `url(${image})` }"
   >
     <h2 class="category-title">{{ title }}</h2>
+    <img
+      :src="image"
+      alt="Moldura decorativa"
+      class="category-moldura"
+    />
   </section>
 </template>
 
@@ -22,23 +26,34 @@ defineProps({
 
 <style scoped>
 .section-category-title {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  min-height: 250px;
-  margin: 40px 0;
+  padding: 2rem 1rem;
 }
 
 .category-title {
   font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  color: #033815;
-  font-weight: bold;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
-  max-width: 80%;
+  font-size: 2.2rem;
+  color: #2e7d32;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.category-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #2e7d32;
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
+
+.category-moldura {
+  width: 100px; /* ou ajuste conforme o design */
+  max-width: 90%;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  transform: translateY(-2px);
 }
 </style>
