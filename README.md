@@ -1,75 +1,49 @@
-# Nuxt Minimal Starter
+# 🌿 Pousada Canto das Aves
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Site oficial da Pousada Canto das Aves, localizada em Visconde de Mauá. Desenvolvido com **Vue 3 + Nuxt + Vuetify**, o projeto apresenta a pousada de forma acolhedora, profissional e responsiva.
 
-## Setup
+## 📸 Principais Seções
 
-Make sure to install dependencies:
+- **Página Inicial:** Apresentação geral da pousada.
+- **Acomodações:** Detalhes das suítes divididas por categorias (Casal, Família, Premium).
+- **A Pousada:** História, estrutura e experiência do hóspede.
+- **Turismo e Região:** Informações sobre cachoeiras, gastronomia, passeios e natureza.
+- **Contato:** Localização, mapa e formas de contato.
+- **Sistema de reservas:** Link direto para reservas.
+
+## 🛠️ Tecnologias Utilizadas
+
+- [Vue 3](https://vuejs.org/)
+- [Nuxt 3](https://nuxt.com/)
+- [Vuetify 3](https://vuetifyjs.com/)
+- CSS Customizado
+- Animações com AOS (Animate On Scroll)
+
+## 📂 Estrutura do Projeto
 
 ```bash
-# npm
+components/      # Componentes Vue reutilizáveis
+pages/           # Páginas do site
+public/images/   # Imagens da pousada e região
+public/videos/   # Vídeos dos heros
+
+## 🚀 Como Rodar Localmente
+
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
 
-# pnpm
-pnpm dev
+Acesse em: http://localhost:3000
 
-# yarn
-yarn dev
+📷 Créditos de Imagens
+Algumas imagens são ilustrativas, utilizadas como placeholders.
 
-# bun
-bun run dev
-```
+Sugere-se substituir pelas fotos reais da pousada.
 
-## Production
+🔗 Link do Site (quando publicado)
+https://seudominio.com.br
 
-Build the application for production:
+📄 Licença
+Uso interno da Pousada Canto das Aves. Adaptável mediante autorização.
 
-```bash
-# npm
-npm run build
+Com carinho, feito para acolher! 🌿
 
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
